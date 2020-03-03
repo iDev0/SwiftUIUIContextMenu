@@ -10,7 +10,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        HStack {
+            Text("Action")
+                .font(.title)
+                .contextMenu {
+                    Button(action: {}) {
+                         Text("Share")
+                         Image(systemName: "square.and.arrow.up")
+                     }
+                     // 3.
+                     Button(action: {}) {
+                         Image(systemName: "heart.fill")
+                         Text("Favorite")
+                     }
+                }
+        }
     }
 }
 
